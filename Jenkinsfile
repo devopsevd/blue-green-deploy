@@ -1,15 +1,18 @@
 node() {
-	       stage("Branch: Code Scan"){      
-          promoteToNext()
+	
+	promoteToNext()  
+	
+	stage("Green To Node 1"){      
+          		promoteToNext()
 	        } // stage branch code scan
      
-	        stage("Branch: Build & Unit Test"){   
+	stage("Green To Node 2"){   
 
 	        } // stage branch build and unit test
      	} // node default build server
 
 def promoteToNext() {
-	stage("Promote to Stage env ?"){
+	stage("Proceed to Deploy ?"){
 		node(){
 	    // we need a first milestone step so that all jobs entering this stage are tracked an can be aborted if needed
 	    milestone 3
