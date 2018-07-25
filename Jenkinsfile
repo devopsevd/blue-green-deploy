@@ -3,7 +3,7 @@ node() {
 	promoteToNext(j)  
 	
 	stage("Green To Node 1"){      
-          		promoteToNext(j+1)
+          		promoteToNext(j+5)
 	        } // stage branch code scan
      
 	stage("Green To Node 2"){   
